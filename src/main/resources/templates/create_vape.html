@@ -1,0 +1,16 @@
+
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Create a Vape</title>
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+<h1>Create a Vape!!!!!!</h1>
+<form action="/api/vapes" method="POST">
+    Brand: <input type="text" name="brand" />
+    Model: <input type="text" name="model" />
+    Wattage: <input type="integer" name="wattage" />
+    <input type="submit" />
+</form>
+</body>
+</html>

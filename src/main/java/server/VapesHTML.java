@@ -1,15 +1,12 @@
 package server;
 
 
-import com.google.gson.Gson;
 import models.Vape;
 import models.VapesStorage;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
-import javax.servlet.http.HttpServletRequest;
-import java.lang.management.MonitorInfo;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
@@ -25,10 +22,16 @@ public class VapesHTML {
         List<Vape> list = new ArrayList<>(vapes);
 
         model.addAttribute("vapes", vapes);
-        return "all_vapes";
+        return "all_vape";
     }
 
     @GetMapping("/new")
+    public String createVapeForm(){
+        return "create_vape.html";
+    }
+
+
+    @GetMapping("/{id}/edit")
     public String editVapesForm(
             @PathVariable("id") int id,
             Model model

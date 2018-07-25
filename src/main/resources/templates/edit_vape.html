@@ -1,0 +1,18 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Edit a Mountain</title>
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+<h1>Edit a mountain</h1>
+<form id="edit-form" th:action="'/api/vapes/' + ${id}" method="PUT">
+    Brand: <input type="text" name="brand" th:value="${brand}"/>
+    Model: <input type="text" name="model" th:value="${model}"/>
+    Wattage: <input type="integer" name="wattage" th:value="${wattage}"/>
+    <button id="delete-vape">delete</button>
+    <input type="submit" value="save"/>
+</form>
+
+<script src="/js/form.js"></script>
+</body>
+</html>
