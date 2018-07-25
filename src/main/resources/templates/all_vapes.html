@@ -1,0 +1,35 @@
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Create a Vape</title>
+        <link rel="stylesheet" href="/css/main.css">
+    </head>
+<body>
+<h1>All Vapes</h1>
+<p>
+    <a href="/vapes/new">
+        Add a new Vape
+    </a>
+</p>
+<ul>
+    <li th:each="vape : ${vapes}">
+        <p>
+
+            <span th:text="${vape.brand}" />,
+            <span th:text="${vape.model}"/> -
+            <span th:text="${vape.wattage}" /> watts
+
+            <a th:href="'/mountain/' + ${vape.id} + '/edit'">
+                edit
+            </a>
+
+        </p>
+    </li>
+
+</ul>
+
+<h1>does this work?</h1>
+
+
+
+
+</body>
