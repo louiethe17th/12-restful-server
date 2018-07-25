@@ -1,10 +1,10 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>Edit a Mountain</title>
+    <title>Edit a Vape</title>
     <link rel="stylesheet" href="/css/main.css">
 </head>
 <body>
-<h1>Edit a mountain</h1>
+<h1>Edit a Vape</h1>
 <form id="edit-form" th:action="'/api/vapes/' + ${id}" method="PUT">
     Brand: <input type="text" name="brand" th:value="${brand}"/>
     Model: <input type="text" name="model" th:value="${model}"/>
